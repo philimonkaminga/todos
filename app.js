@@ -9,6 +9,10 @@ addTodoBtn.addEventListener('click', (e)=>{
 
     liElement.textContent = todoInput.value; 
 
+    liElement.onclick = function (e){
+        liElement.remove()
+    }
+
     todoList.appendChild(liElement);
     todoInput.value = '';
 });
